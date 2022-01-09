@@ -5,6 +5,7 @@ with open('info.html') as html_file:
 
 rows = soup.find('table').find_all('tr')[1:]
 
+
 # table data
 table_data = []
 for row in rows:
@@ -38,6 +39,7 @@ all_data = table_data + special_data
 
 
 # do it all in one swoop
+all_data = []
 for tr in soup.find_all('tr'):
     values = [td.text for td in tr.find_all('td')]
     if len(values) != 0:
@@ -45,3 +47,4 @@ for tr in soup.find_all('tr'):
             'email': values[1],
             'number': values[2],
         }
+        all_data.append(data)
