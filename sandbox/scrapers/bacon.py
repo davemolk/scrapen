@@ -1,13 +1,14 @@
-from bs4 import BeautifulSoup
-import requests
-
-import datetime
 import random
 import re
+
+from bs4 import BeautifulSoup
+import requests
 
 
 random.seed()
 def get_links(url):
+    """Return URLs from Kevin Bacon wikipedia entry"""
+
     try:
         r  = requests.get(f'https://en.wikipedia.org{url}', timeout=5)
         r.raise_for_status()
@@ -15,12 +16,12 @@ def get_links(url):
         raise SystemExit(e) 
     soup = BeautifulSoup(r.text, 'html.parser')
     links = soup.find('div', id='bodyContent').find_all(
-        'a', href=re.compile(r'^(/wiki/)((?!:).)*$'))
+            'a', href=re.compile(r'^(/wiki/)((?!:).)*$'))
     if len(links) == 0:
         return None
     else:  
         return soup.find('div', id='bodyContent').find_all(
-            'a', href=re.compile(r'^(/wiki/)((?!:).)*$'))
+                'a', href=re.compile(r'^(/wiki/)((?!:).)*$'))
 
     
 links = get_links('/wiki/Kevin_Bacon')
