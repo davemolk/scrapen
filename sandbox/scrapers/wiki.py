@@ -6,6 +6,8 @@ import requests
 
 pages = set()
 def get_links(page_url):
+    """Print title, first paragraph, and edit link"""
+    
     global pages
     r = requests.get(f'http://en.wikipedia.org{page_url}')
     soup = BeautifulSoup(r.text, 'html.parser')
