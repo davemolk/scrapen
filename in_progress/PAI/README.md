@@ -1,0 +1,2 @@
+# About
+Still figuring out the aim and scope of this project, but I'd like to use the information provided by Plot Against Immigrants (https://plotagainstimmigrants.com/) as a starting point. I imagine scraping that site and feeding that information into crawlers in order to help expand their network.
