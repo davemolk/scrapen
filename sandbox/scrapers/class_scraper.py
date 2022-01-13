@@ -69,6 +69,7 @@ websites = []
 for row in site_data:
     websites.append(Website(row[0], row[1], row[2],row[3]))
 
+
 crawler.parse(
     websites[0], 'http://www.reuters.com/article/us-usa-epa-pruitt-idUSKBN19W2D0')
 crawler.parse(

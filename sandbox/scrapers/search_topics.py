@@ -57,7 +57,10 @@ class Crawler:
         """Searches site for a given topic"""
         soup = self.get_page(site.search_url + topic)
         search_results = soup.select(site.result_listing)
+        # print(search_results)
         for result in search_results:
+            # print(result)
+            print(result.select(site.result_url))
             url = result.select(site.result_url)[0].attrs['href']
             if site.abs_url:
                 soup = self.get_page(url)
@@ -76,13 +79,8 @@ class Crawler:
 crawler = Crawler()
 
 site_data = [
-    # ['Reuters', 'http://reuters.com', 'http://www.reuters.com/search/news?blob=', 
-    #     'div.search-result-content', 'h3.search-result-title a', False, 'h1', 
-    #     'div.StandardArticleBody_body_1gnLA'],
-    # ['Brookings', 'http://www.brookings.edu', 'https://www.brookings.edu/search/?s=',
-    #     'div.list-content article', 'h4.title a', True, 'h1', 'div.post-body'],
     ['Corey', 'https://coreyms.com', 'https://coreyms.com/?s=', 'main.content article', 
-            'h2.entry-title a', True, 'h1', 'div.entry-content']
+            'h2.entry-title a', True, 'h1', 'div.entry-content'],
 ]
 
 sites = []
