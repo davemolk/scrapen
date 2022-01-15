@@ -6,9 +6,21 @@ scrapy genspider <spider name> <allowed_domains>
 scrapy shell <url you want to look at>
 scrapy shell -s USER_AGENT='' <url>
 
+can also let shell load and then use fetch(<url>) to get the page
+
 >>> response
 
 >>> response.css('div.image_container a::attr(href)').get() # gets first
 
+could also write response.css('div.image_container a').attrib['href'] to get the link href
+
+clean data with .strip(), .replace(), etc.
+
 # crawl
 scrapy crawl <name>
+
+# output data
+scrapy crawl <name> -o books.csv
+scrapy crawl <name> -o books.json
+
+-o will append and -O will overwrite
