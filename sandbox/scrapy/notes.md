@@ -36,13 +36,11 @@ pass in fake headers
 >>> req = Request('https://httpbin.org/headers', headers={'User-Agent': 'FAKE USER'})
 
 
-
-
 # css selectors
 access other attributes like so: response.css('a[title='Next']::attr(href)')
 
 
-# item
+# items.py
 go to items.py
 
 enter fields (name = scrapy.Field())
@@ -76,3 +74,13 @@ scrapy crawl <name> -o books.json
 
 # CrawlerProcess
 use if you just want the spider and none of the other Scrapy goodness
+
+
+# CrawlSpider
+from scrapy.spiders import CrawlSpider, Rule
+from scrapy.linkextractors import LinkExtractor
+
+need to set rules and can't name your parse function 'parse'
+
+rules are always a tuple and you don't need to specifya callback function for the first rule...scrapy will automatically follow those urls
+
