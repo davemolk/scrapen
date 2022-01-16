@@ -11,7 +11,7 @@ class AuthorSpider(scrapy.Spider):
         yield from response.follow_all(author_page_links, self.parse_author)
 
         pagination_links = response.css('li.next a')
-        yield from response.follow_all(pagination_links, self.parse_)
+        yield from response.follow_all(pagination_links, self.parse)
 
     def parse_author(self, response):
         def extract_with_css(query):
@@ -22,5 +22,3 @@ class AuthorSpider(scrapy.Spider):
             'birthdate': extract_with_css('.author-born-date::text'),
             'bio': extract_with_css('.author-description::text'),
         }
-
-        
