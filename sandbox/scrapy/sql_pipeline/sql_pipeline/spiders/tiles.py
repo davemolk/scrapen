@@ -12,9 +12,9 @@ class TilesSpider(scrapy.Spider):
     def parse(self, response):
         for product in response.css('li.product'):
             il = ItemLoader(item=SqlPipelineItem(), selector=product)
+            il.add_css('sku', 'a.button::attr(data-product_sku)')
             il.add_css('name', 'h2.woocommerce-loop-product__title')
             il.add_css('price', 'span.woocommerce-Price-amount bdi')
-            il.add_css('sku', 'a.button::attr(data-product_sku)')
             
             yield il.load_item()
 

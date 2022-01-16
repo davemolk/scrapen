@@ -98,3 +98,12 @@ need to set rules and can't name your parse function 'parse'
 
 rules are always a tuple and you don't need to specifya callback function for the first rule...scrapy will automatically follow those urls
 
+
+# pipelines
+import sqlite3
+
+create an init and connect to db 
+def __init__(self):
+    self.con = sqlite3.connect('mtiles.db') 
+    # cursor is what we use to execute commands into db
+    self.cur = self.con.cursor()
