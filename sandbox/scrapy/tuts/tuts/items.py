@@ -5,8 +5,17 @@
 
 import scrapy
 
+from itemloaders.processors import TakeFirst, MapCompose
+from w3lib.html import remove_tags
+
+def strip(text: str):  
+    return text.strip().replace('\n', ' ')
+
 
 class TutsItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    name = scrapy.Field(input_processor = MapCompose(remove_tags, strip), 
+                        output_processor = TakeFirst())
+    birthdate = scrapy.Field(input_processor = MapCompose(remove_tags), 
+                        output_processor = TakeFirst())
+    bio = scrapy.Field(input_processor = MapCompose(remove_tags, strip), 
+                        output_processor = TakeFirst())
