@@ -23,6 +23,8 @@ could also write response.css('div.image_container a').attrib['href'] to get the
 
 clean data with .strip(), .replace(), etc. (if not using items.py or item loaders)
 
+The view(response) command let’s us view the response our shell or later our spider receives from the server.
+
 
 # shell no project
 >>> scrapy shell
@@ -85,7 +87,6 @@ or shorten further:
 yield from response.follow_all(css='ul.pager a', callback=self.parse)
 
 
-
 # crawl
 scrapy crawl <name>
 
@@ -132,3 +133,7 @@ def __init__(self):
     self.con = sqlite3.connect('mtiles.db') 
     # cursor is what we use to execute commands into db
     self.cur = self.con.cursor()
+
+
+# cURL commands
+https://michael-shub.github.io/curl2scrapy/
