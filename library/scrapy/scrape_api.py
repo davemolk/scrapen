@@ -14,7 +14,9 @@ class QuoteSpider(scrapy.Spider):
         data = json.loads(response.text)
         for quote in data['quotes']:
             yield {
-                'quote': quote['text'].strip()
+                'author': quote['author']['name'],
+                'quote': quote['text'].strip(),
+                'tags': quote['tags'],
             }
         if data['has_next']:
             self.page += 1
