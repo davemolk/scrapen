@@ -7,7 +7,6 @@ from urllib.parse import urljoin
 import re
 import scrapy
 from itemloaders.processors import TakeFirst, MapCompose
-from w3lib.html import remove_tags
 
 def strip(value):
     if value is not None:
@@ -35,7 +34,7 @@ class GithubTrendingItem(scrapy.Item):
         input_processor = MapCompose(make_link),
         output_processor = TakeFirst(),
     )
-    desc = scrapy.Field(
+    description = scrapy.Field(
         input_processor = MapCompose(strip),
         output_processor = TakeFirst(),
     )
