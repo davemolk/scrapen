@@ -1,4 +1,4 @@
-import urllib.parse
+from datetime import datetime
 
 import scrapy
 from scrapy.loader import ItemLoader
@@ -19,7 +19,7 @@ class GittySpider(scrapy.Spider):
             l.add_css("language", "span[itemprop='programmingLanguage']::text")
             l.add_css("total_stars", "div.color-fg-muted a::text")
             l.add_css("stars_today", "div.color-fg-muted span.float-sm-right::text")
-            l.add_value("date", "today") # come back to this
+            l.add_value("date", datetime.now()) # come back to this
 
             yield l.load_item()
 

@@ -50,4 +50,6 @@ class GithubTrendingItem(scrapy.Item):
         input_processor = MapCompose(strip, get_today),
         output_processor = TakeFirst(),
     )
-    date = scrapy.Field()
+    date = scrapy.Field(
+        output_processor = TakeFirst(),
+    )
