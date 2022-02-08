@@ -10,6 +10,7 @@ scrapy = "*"
 bpython = "*"
 pandas = "*"
 requests-html = "*"
+scrapy-playwright = "*"
 
 [dev-packages]
 
