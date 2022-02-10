@@ -139,6 +139,18 @@ def __init__(self):
 https://michael-shub.github.io/curl2scrapy/
 
 
+# logins
+option 1)
+get csrf value from network tab after a login attempt
+from scrapy import FormRequest
+csrf_token = response.xpath("//*[@name='csrf_token']/@value").get()
+yield FormRequest.from_response(response, formdata, callback)
+
+option 2)
+
+
+
+
 # scrapy playwright
 https://github.com/scrapy-plugins/scrapy-playwright
 
