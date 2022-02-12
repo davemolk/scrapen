@@ -17,7 +17,6 @@ class LoggySpider(scrapy.Spider):
             value = input.css('::attr(value)').get()
             formdata[name] = value
         
-        print("*****formdata*****", formdata)
         formdata['username'] = 'loggy2'
         formdata['password'] = 'test1234'
 

@@ -15,6 +15,7 @@ class LoggySpider(scrapy.Spider):
             'username': 'scrapy',
             'password': 'gethappy',
         }
+        
         yield FormRequest.from_response(
             response, 
             formdata=formdata, 
