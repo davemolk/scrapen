@@ -22,9 +22,15 @@ class DeetsSpider(scrapy.Spider):
             yield response.follow(next_page, callback=self.get_links)
 
     def parse_details(self, response):
+        header = []
+        data = []
+        for row in response.css('table tr'):
+            header.append(row.css('th::text').get())
+            data.append(row.css('td::text').get())
         yield{
             'title': response.css('h1::text').get(),
             'price': response.css('p.price_color').get(),
             'availability': response.css('p.instock::text').getall()[1].strip(),
             'description': response.css('div#product_description + p::text').get(),
+            'table': dict(zip(header, data))
         }
