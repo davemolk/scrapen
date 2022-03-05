@@ -12,6 +12,7 @@ pandas = "*"
 requests-html = "*"
 scrapy-playwright = "*"
 twisted = "*"
+playwright = "*"
 
 [dev-packages]
 
