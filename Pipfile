@@ -6,13 +6,13 @@ name = "pypi"
 [packages]
 requests = "*"
 beautifulsoup4 = "*"
-scrapy = "*"
 bpython = "*"
 pandas = "*"
 requests-html = "*"
 scrapy-playwright = "*"
 twisted = "*"
 playwright = "*"
+scrapy = "*"
 
 [dev-packages]
 

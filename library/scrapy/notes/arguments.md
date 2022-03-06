@@ -1,12 +1,14 @@
 # arguments
 pass through crawl command using the -a option
-scrapy crawl <spider_name> -a category=electronics
-(access via __init__)
+
+$ scrapy crawl <spider_name> -a category=electronics
+
+(access the param via __init__)
 def __init__(self, category=None, *args, **kwargs):
     super.(MySpider, self).__init__(*args, **kwargs)
     self.start_urls = [f'http://www.example.com/categories/{category}']
 
-note: could also write as:
+another option is to bypass __init__ entirely and write like so:
 def start_requests(self):
     yield scrapy.Request(f'http://www.example.com/categories/{self.category})
 
