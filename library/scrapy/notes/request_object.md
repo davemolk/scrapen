@@ -1,3 +1,11 @@
+# parameters
+url, callback, method, meta, body, headers, cookies, encoding, priority, dont_filter, errback, flags, cb_kwargs
+
+
+# Request.meta special keys
+The Request.meta attribute can contain any arbitrary data, but there are some special keys recognized by Scrapy and its built-in extensions. Some good stuff here
+
+
 # request object
 you can return (yield) multiple times within a function
 def parse(self, response):
