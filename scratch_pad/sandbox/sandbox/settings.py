@@ -17,7 +17,8 @@ NEWSPIDER_MODULE = 'sandbox.spiders'
 #USER_AGENT = 'sandbox (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
+# ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32

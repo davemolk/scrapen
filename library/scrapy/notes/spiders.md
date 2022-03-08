@@ -22,3 +22,12 @@ rules are always a tuple and you don't need to specify a callback function for t
 
 rule parameters: link_extractor, callback, cb_kwargs, follow, process_links, process_request, errback
 
+
+# XMLFeedSpider
+Use the iternodes iterator for performance reasons, since the xml and html iterators generate the whole DOM at once in order to parse it. However, using html as the iterator may be useful when parsing XML with bad markup. iternodes is the default iterator
+
+
+# CSVFeedSpider
+
+
+# SitemapSpider
