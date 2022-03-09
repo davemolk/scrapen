@@ -16,6 +16,6 @@ class BookPagesItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     name = scrapy.Field(input_processor = MapCompose(remove_tags), output_processor = TakeFirst())
-    price = scrapy.Field(scrapy.Field(input_processor = MapCompose(remove_tags, remove_currency), output_processor = TakeFirst()))
+    price = scrapy.Field(input_processor = MapCompose(remove_tags, remove_currency), output_processor = TakeFirst())
     link = scrapy.Field()
     
