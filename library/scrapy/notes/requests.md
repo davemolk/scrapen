@@ -15,3 +15,14 @@ def parse(self, response):
     for href in response.css('a::attr(href)').getall():
         yield scrapy.Request(response.urljoin(href), self.parse)
 
+
+# FormRequest (see form_request.md)
+
+
+# JsonRequest (send JSON payloads)
+data = {
+    'name1': 'value1',
+    'name2': 'value2',
+}
+
+yield JsonRequest(url='http://www.example.com/post/action', data=data)
