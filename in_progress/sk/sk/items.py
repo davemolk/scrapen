@@ -17,3 +17,4 @@ class SkItem(scrapy.Item):
         input_processor=MapCompose(clean),
     )
     link = scrapy.Field()
+    title = scrapy.Field()
