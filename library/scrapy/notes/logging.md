@@ -46,3 +46,23 @@ class MySpider(scrapy.Spider):
 
     def parse(self, response):
         logger.info('parse function called on %s', response.url)
+
+
+# logging settings
+LOG_FILE
+LOG_FILE_APPEND
+LOG_ENABLED
+LOG_ENCODING
+LOG_LEVEL
+LOG_FORMAT
+LOG_DATEFORMAT
+LOG_STDOUT
+LOG_SHORT_NAMES
+
+The first couple of settings define a destination for log messages. If LOG_FILE is set, messages sent through the root logger will be redirected to a file named LOG_FILE with encoding LOG_ENCODING. If unset and LOG_ENABLED is True, log messages will be displayed on the standard error. If LOG_FILE is set and LOG_FILE_APPEND is False, the file will be overwritten (discarding the output from previous runs, if any). Lastly, if LOG_ENABLED is False, there won’t be any visible log output.
+
+LOG_LEVEL determines the minimum level of severity to display, those messages with lower severity will be filtered out. It ranges through the possible levels listed in Log levels.
+
+LOG_FORMAT and LOG_DATEFORMAT specify formatting strings used as layouts for all messages. Those strings can contain any placeholders listed in logging’s logrecord attributes docs and datetime’s strftime and strptime directives respectively.
+
+If LOG_SHORT_NAMES is set, then the logs will not display the Scrapy component that prints the log. It is unset by default, hence logs contain the Scrapy component responsible for that log output.
