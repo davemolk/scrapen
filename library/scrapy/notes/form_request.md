@@ -13,8 +13,7 @@ return [FormRequest(url="http://www.example.com/post/action",
 import scrapy
 
 def authentication_failed(response):
-    # TODO: Check the contents of the response and return True if it failed
-    # or False if it succeeded.
+    # TODO: Check the contents of the response and return True if it failed or False if it succeeded.
     pass
 
 class LoginSpider(scrapy.Spider):

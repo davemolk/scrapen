@@ -12,6 +12,7 @@ class ArgSpider(scrapy.Spider):
 
     def parse(self, response):
         for link in response.css('a::attr(href)'):
+            print("*********", link.get())
             yield response.follow(
                 link, 
                 callback=self.parse_details,

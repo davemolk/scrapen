@@ -1,0 +1,26 @@
+date,description,language,link,name,stars_today,total_stars
+2022-03-17 20:21:42.617379,,TypeScript,https://github.com/nkallen/plasticity,/nkallen/plasticity,237,"1,306"
+2022-03-17 20:21:42.622569,A simple FOSS video streaming client aimed to recreate ALL features from their respective apps (and more),Vue,https://github.com/Frontesque/VueTube,/Frontesque/VueTube,233,925
+2022-03-17 20:21:42.628550,"A Lodash-style Go library based on Go 1.18+ Generics (map, filter, contains, find...)",Go,https://github.com/samber/lo,/samber/lo,114,"3,455"
+2022-03-17 20:21:42.633945,The uncompromising Python code formatter,Python,https://github.com/psf/black,/psf/black,165,"26,311"
+2022-03-17 20:21:42.639395,A toy programming language written in Typescript,TypeScript,https://github.com/DulLabs/bhai-lang,/DulLabs/bhai-lang,305,"2,487"
+2022-03-17 20:21:42.644825,"A curated list of awesome Python frameworks, libraries, software and resources",Python,https://github.com/vinta/awesome-python,/vinta/awesome-python,142,"120,261"
+2022-03-17 20:21:42.649721,Awesome lists about all kinds of interesting topics,,https://github.com/sindresorhus/awesome,/sindresorhus/awesome,304,"193,883"
+2022-03-17 20:21:42.655068,"The devs are over here at devzat, chat over SSH!",Go,https://github.com/quackduck/devzat,/quackduck/devzat,89,800
+2022-03-17 20:21:42.660238,"CodeEdit App for macOS – Elevate your code editing experience. Open source, free forever.",Swift,https://github.com/CodeEditApp/CodeEdit,/CodeEditApp/CodeEdit,298,845
+2022-03-17 20:21:42.665309,A brief computer graphics / rendering course,C++,https://github.com/ssloy/tinyrenderer,/ssloy/tinyrenderer,157,"12,948"
+2022-03-17 20:21:42.670537,实现最简 vue3 模型( Help you learn more efficiently vue3 source code ),TypeScript,https://github.com/cuixiaorui/mini-vue,/cuixiaorui/mini-vue,111,"5,173"
+2022-03-17 20:21:42.675830,"Code for ""Zero To Production In Rust"", a book on API development using Rust.",Rust,https://github.com/LukeMathWalker/zero-to-production,/LukeMathWalker/zero-to-production,200,"1,297"
+2022-03-17 20:21:42.680840,CVE-2022-25636,C,https://github.com/Bonfee/CVE-2022-25636,/Bonfee/CVE-2022-25636,26,278
+2022-03-17 20:21:42.685821,a benchmark for Huawei CodeCraft 2022 判题器 算分器,Python,https://github.com/diphosphane/CodeCraft2022-benchmark,/diphosphane/CodeCraft2022-benchmark,19,69
+2022-03-17 20:21:42.691199,Todas as aulas da Semana JS Expert 6.0 - Spotify Radio,JavaScript,https://github.com/ErickWendel/semana-javascript-expert06,/ErickWendel/semana-javascript-expert06,146,"1,034"
+2022-03-17 20:21:42.696418,Reactive Programming in Swift,Swift,https://github.com/ReactiveX/RxSwift,/ReactiveX/RxSwift,98,"21,887"
+2022-03-17 20:21:42.701427,The Go programming language,Go,https://github.com/golang/go,/golang/go,106,"96,743"
+2022-03-17 20:21:42.706905,Examples and Tutorials of Event Sourcing in .NET,C#,https://github.com/oskardudycz/EventSourcing.NetCore,/oskardudycz/EventSourcing.NetCore,93,"1,750"
+2022-03-17 20:21:42.711969,A libre lightweight streaming front-end for Android.,Java,https://github.com/TeamNewPipe/NewPipe,/TeamNewPipe/NewPipe,92,"18,022"
+2022-03-17 20:21:42.716990,网易云音乐自动任务：刷等级、云贝、云豆等,Python,https://github.com/chen310/NeteaseCloudMusicTasks,/chen310/NeteaseCloudMusicTasks,41,828
+2022-03-17 20:21:42.721960,"Curated list of design and UI resources from stock photos, web templates, CSS frameworks, UI libraries, tools and much more",,https://github.com/bradtraversy/design-resources-for-developers,/bradtraversy/design-resources-for-developers,98,"37,352"
+2022-03-17 20:21:42.727359,The fastest,Python,https://github.com/ploomber/ploomber,/ploomber/ploomber,39,"1,882"
+2022-03-17 20:21:42.732188,A list of papers about distributed consensus.,,https://github.com/heidihoward/distributed-consensus-reading-list,/heidihoward/distributed-consensus-reading-list,54,"1,233"
+2022-03-17 20:21:42.737124,,Jupyter Notebook,https://github.com/yangxy/GPEN,/yangxy/GPEN,29,"1,162"
+2022-03-17 20:21:42.742400,"A ""linux"" in python, for the rpi pico!",Python,https://github.com/bill88t/ljinux,/bill88t/ljinux,34,128

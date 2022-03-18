@@ -25,9 +25,13 @@ def get_today(value):
     clean = re.findall('\d+', value)
     return clean
 
+def namify(value):
+    # print("************************", value.split('/')[2])
+    return value.split('/')[-1]
 
 class GithubTrendingItem(scrapy.Item):
     name = scrapy.Field(
+        input_processor = MapCompose(namify),
         output_processor = TakeFirst(),
     )
     link = scrapy.Field(
@@ -49,6 +53,7 @@ class GithubTrendingItem(scrapy.Item):
         input_processor = MapCompose(strip, get_today),
         output_processor = TakeFirst(),
     )
+    contributors = scrapy.Field()
     date = scrapy.Field(
         output_processor = TakeFirst(),
     )
