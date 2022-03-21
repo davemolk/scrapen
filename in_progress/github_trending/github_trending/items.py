@@ -26,7 +26,6 @@ def get_today(value):
     return clean
 
 def namify(value):
-    # print("************************", value.split('/')[2])
     return value.split('/')[-1]
 
 class GithubTrendingItem(scrapy.Item):
@@ -54,6 +53,7 @@ class GithubTrendingItem(scrapy.Item):
         output_processor = TakeFirst(),
     )
     contributors = scrapy.Field()
+    
     date = scrapy.Field(
         output_processor = TakeFirst(),
     )
